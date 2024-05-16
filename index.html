@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
   <title>MovieMate</title>
 </head>
 <body>
   <div id="app">
-    <div id="main">
-      <h1>Buscar por Filme</h1>
-      <input type="text" id="title" placeholder="Digite o titulo do filme">
-      <button onclick="searchMovies()">Buscar  </button>
-    </div>
+    <header>
+      <p class="logo">MovieMate</p>   
+      <div class="search-wrapper">
+        <button onclick="searchMovies()">Buscar  </button>
+        <input type="search" id="title" placeholder="Digite o titulo do filme">
+      </div>
+    </header>
+    
     <div id="result"></div>
   </div>
 </body>

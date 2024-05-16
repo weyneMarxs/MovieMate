@@ -1,3 +1,3 @@
-function searchMovies() {
-  console.log('até aqui, tudo ok !')
+async function searchMovies() {
+  const title = document.getElementById('title').value
 }
