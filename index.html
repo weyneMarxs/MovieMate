@@ -12,25 +12,42 @@
 <body>
   <div id="app">
     <header>
-      <p class="logo">MovieMate.</p>   
+      <p class="logo">MovieMate.</p>
+      <div class="nav">
+        <a href="#"></a>Inicio<a href="#">Lacamentros</a><a href="#">Mais Populares</a>
+      </div>
       <div class="search-wrapper">
         <button onclick="searchMovies()">Buscar  </button>
         <input type="search" id="title" placeholder="Digite o titulo do filme">
       </div>
     </header>
+
+    <h1></h1>
     
     <div id="result">
-      <div class="card">
-        <!-- <img src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="">
+      <table id="table" style="width: 100%; margin-top: 20px; border-collapse: collapse;">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Sinopse</th>
+                <th>Data de Lançamento</th>
+                <th>Pôster</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+      <!-- <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg" alt="">
         <button><i class='bx bx-movie' ></i> <span>Trailer</span></button>
         <div class="actions">
           <a href="#"><i class='bx bxs-star clicked'></i></i><span>Favorito</span></a>
           <a href="#"><i class='bx bxs-bookmark-star' ></i><span>Assistir mais Tarde</span></a>
           <a href="#"><i class='bx bx-show'></i><span>Assistido !</span></a>
-        </div> -->
+        </div>
       </div>
       <div id="description">
-        <!-- <h1>Matrix</h1>
+        <h1>Matrix</h1>
 
         <h3>Sinopse</h3>
 
@@ -40,8 +57,8 @@
           <li><span>Nota: </span> <p>8.5</p></li>
           <li><span>Lançado: </span> <p>1992</p></li>
           <li><span>Genero: </span> <p>Ação, aventura, ficção cientifica</p></li>
-        </ul> -->
-      </div>
+        </ul>
+      </div> -->
     </div>
   </div>
 </body>
