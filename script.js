@@ -1,8 +1,20 @@
+const title = document.getElementById('title')
+
+title.addEventListener("focusin", () => {
+  title.classList.add('focus')
+});
+
+title.addEventListener("focusout", () => {
+  if(title.value) {
+    title.classList.add('focus')
+  } else {
+    title.classList.remove('focus')
+  }
+});
 async function searchMovies() {
-  const title = document.getElementById('title')
   const API_KEY = '7a7c314f199c464edbbab80749e3e013'
   // const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(titulo)}`
-  const url = `https://api.themoviedb.org/3/search/movie?query=${title.value}&api_key=7a7c314f199c464edbbab80749e3e013&language=pt-BR`
+  const url = `https://api.themoviedb.org/3/search/movie?query=${title.value}&api_key=${API_KEY}&language=pt-BR`
 
   try{
     const response = await fetch(url)
