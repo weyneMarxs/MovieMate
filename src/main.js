@@ -2,12 +2,10 @@ import toggleInputBackground from "./events/toggleInputBackground.js"
 import searchMovies from "./searchMovies/SearchMovies.js"
 const inputSearch = document.getElementById('searchInput')
 const btn = document.getElementById('searchBtn')
-const api_key = '7a7c314f199c464edbbab80749e3e013'
 
 
 toggleInputBackground(inputSearch)
-searchMovies(inputSearch, api_key)
-
+btn.addEventListener('click', searchMovies)
 // async function searchMovies(api_key, inputSearch) {
 //   // const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(titulo)}`
 //   const url = `https://api.themoviedb.org/3/search/movie?query=${title.value}&api_key=${API_KEY}&language=pt-BR`

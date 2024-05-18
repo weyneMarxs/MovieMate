@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-a, button {
+a,
+button {
   text-decoration: none;
   cursor: pointer;
   color: white;
@@ -15,7 +17,9 @@ body {
   background-color: #0F1B33;
 }
 
-body, input, button {
+body,
+input,
+button {
   font-family: 'Inter', sans-serif;
   color: white;
 }
@@ -37,22 +41,25 @@ body, input, button {
 
 #header .logo p {
   font-size: 20px;
-  font-weight:700;
+  font-weight: 700;
 }
 
 #header .nav {
   display: flex;
   gap: 20px;
-} 
+}
+
 #header .nav a {
   font-weight: 300;
   padding-bottom: 4px;
   transition: all .3 ease;
-  
+
 }
-#header .nav a:hover{
+
+#header .nav a:hover {
   border-bottom: 4px solid #1D4ED8;
 }
+
 .searchBlock {
   width: 300px;
   display: flex;
@@ -81,17 +88,36 @@ input::placeholder {
 }
 
 #searchInput.focus {
-    background-image: none;
+  background-image: none;
 }
 
 #searchBtn {
-  padding:7px;
+  padding: 7px;
   background-color: #1D4ED8;
   border: none;
   border-radius: 7px;
   transition: all .3s ease;
 }
+
 #searchBtn:hover {
   filter: brightness(2);
   font-weight: 400;
+}
+
+
+#error {
+  width: 400px;
+  height: 50px;
+  position: relative;
+  background: rgba(247, 81, 81, 0.678);
+  border-radius: 7px;
+  margin: 10px auto;
+  display: grid;
+  place-content: center;
+  /* text-align: center; */
+  transition: all .9s ease;
+}
+
+#error.hide {
+  display: none;
 }
