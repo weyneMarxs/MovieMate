@@ -1,13 +1,14 @@
-import { displayMovies } from "../events/displayMovies/displayMovies.js"
-import { errorMessage } from "../events/error.js"
+import { displayMovies } from "../displayMovies/displayMovies.js"
+import { errorMessage, errorShake } from "../events/error.js"
 
 export default async function searchMovies() {
   const api_key = '7a7c314f199c464edbbab80749e3e013'
   const querySeach = document.getElementById('searchInput').value
   const url = `https://api.themoviedb.org/3/search/movie?query=${querySeach}&api_key=${api_key}&language=pt-BR`
+  const messageError = `Filme não encontrado : ${querySeach}`
 
   if(querySeach.trim() === '') {
-    errorMessage('Campo Vazio !')
+    errorShake()
     return
   }
   fetch(url)
@@ -15,9 +16,8 @@ export default async function searchMovies() {
     .then(data => {
       if(data.results.length > 0) {
         displayMovies(data.results)
-        // console.log(data.results)
       } else {
-        errorMessage('Filme não encontrado !')
+        errorMessage(messageError)
       }
     })
   //   try{

@@ -105,6 +105,45 @@ input::placeholder {
 }
 
 
+#movieResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  padding: 16px;
+}
+
+#movieCard {
+  width: 250px;
+  height: 550px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+  border-radius: 10px;
+  border: 1px solid rgba(217, 217, 217, .08);
+  background: rgba(135, 135, 135, .08);
+
+}
+
+#movieImgBlock {
+  width: 248px;
+  height: 400px;
+  overflow: hidden;
+
+}
+
+#movieImgBlock img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
 #error {
   width: 400px;
   height: 50px;
@@ -114,10 +153,51 @@ input::placeholder {
   margin: 10px auto;
   display: grid;
   place-content: center;
-  /* text-align: center; */
-  transition: all .9s ease;
 }
 
 #error.hide {
   display: none;
+}
+
+
+#searchInput.error {
+  -webkit-animation: shake 0.2s ease-in-out 0s 2;
+  animation: shake 0.2s ease-in-out 0s 2;
+  box-shadow: 0 0 0.5em rgba(247, 81, 81, 0.678);
+}
+
+@-webkit-keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+
+  25% {
+    margin-left: 0.5rem;
+  }
+
+  75% {
+    margin-left: -0.5rem;
+  }
+
+  100% {
+    margin-left: 0rem;
+  }
+}
+
+@keyframes shake {
+  0% {
+    margin-left: 0rem;
+  }
+
+  25% {
+    margin-left: 0.5rem;
+  }
+
+  75% {
+    margin-left: -0.5rem;
+  }
+
+  100% {
+    margin-left: 0rem;
+  }
 }
