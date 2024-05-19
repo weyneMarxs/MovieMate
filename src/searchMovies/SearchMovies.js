@@ -20,22 +20,4 @@ export default async function searchMovies() {
         errorMessage(messageError)
       }
     })
-  //   try{
-  //   const response = await fetch(url)
-  //   const data = await response.json()
-  //   if(data.results.length > 0) {
-  //     const movie = data.results
-  //     console.log(movie)
-  //     // showMovie(movie)
-  //   } else {
-  //     // document.getElementById('result').innerHTML = `<h2>Não Encontramos nenhum titulo com o nome <strong>${title.value}</strong></h2>`
-  //   // document.getElementById('table-body').innerHTML = `<tr><td colspan="4">filme não encontrado : ${title}</td></tr>
-
-  //   }
-  // } catch(error) {
-  //   console.error(`Erro ao buscar o filme: ${error}`)
-  //   // document.getElementById('table-body').innerHTML = `<tr><td colspan="4">Erro ao buscar o filme: ${error}</td></tr>`
-  // }
-  // input.value = ''
-
 }

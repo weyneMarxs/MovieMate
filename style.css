@@ -7,7 +7,8 @@
 }
 
 a,
-button {
+button,
+div.markers p {
   text-decoration: none;
   cursor: pointer;
   color: white;
@@ -114,20 +115,28 @@ input::placeholder {
   height: 100%;
   gap: 30px;
   padding: 16px;
+  /* opacity: 8%; */
 }
 
 #movieCard {
   width: 250px;
-  height: 550px;
+  height: 600px;
   display: flex;
   text-align: center;
+  gap: 8px;
   flex-direction: column;
+  position: relative;
   align-items: center;
-  /* justify-content: space-between; */
   border-radius: 10px;
   border: 1px solid rgba(217, 217, 217, .08);
   background: rgba(135, 135, 135, .08);
 
+}
+
+#movieCard p,
+span {
+  font-size: 13px;
+  font-weight: 300;
 }
 
 #movieImgBlock {
@@ -144,6 +153,61 @@ input::placeholder {
   border-radius: 10px 10px 0 0;
 }
 
+div.markers {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  padding-bottom: 2px;
+  bottom: 0;
+  justify-content: center;
+  gap: 15px;
+}
+
+div.markers p {
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.markers p i {
+  font-size: 18px;
+}
+
+div.markers p:hover {
+  color: #1D4ED8;
+}
+
+#modal-card {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  border-radius: 7px;
+  position: fixed;
+  display: block;
+  border: 1px solid rgba(217, 217, 217, .2);
+  background: rgba(135, 135, 135, .3);
+  z-index: 1;
+  inset: 100px 0 0 0;
+}
+
+#modal-card i {
+  font-size: 24px;
+  color: #f75151;
+  font-weight: 300;
+  cursor: pointer;
+  float: right;
+}
+
+#card i:hover {
+  color: #f13d3d;
+  font-weight: 700;
+}
+
 #error {
   width: 400px;
   height: 50px;
@@ -155,7 +219,8 @@ input::placeholder {
   place-content: center;
 }
 
-#error.hide {
+#error.hide,
+#modal-card.hide {
   display: none;
 }
 
