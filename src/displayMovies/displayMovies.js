@@ -15,37 +15,38 @@ export function displayMovies(movies) {
           <p>Titulo Original: ${movie.original_title}</p>
           <p>Lançado: ${formatDate(movie.release_date)}</p>
           <span>Nota: ${movie.vote_average}</span>
-          <div class="markers">
-            <p id="openModal">
-              <i class='bx bx-show'></i>
-              <span>ver mais</span>
-            </p>
-            <p>
-              <i class='bx bx-bookmark'></i>
-              <span>Assitir Depois</span>
-            </p>
-            <p>
-              <i class='bx bx-star' ></i>
-              <span>Favoritar</span>
-            </p>
-          </div>
         </div>
      `
-     movieResultContainer.appendChild(movieElement)
+     movieElement.addEventListener('click', () => {
+        const modal = document.getElementById('modal')
+        modal.classList.remove('hide')
+        const modalCard = document.getElementById('modal-card')
+        modalCard.innerHTML = ''
+        modalCard.innerHTML = `
+          <div class="card">
+              <i class='bx bx-x' id="closeBtn"></i>
+              <div class="card-left">
+                <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="Poster do Filme"/>
+                <div class="content">
+                  <h4>${movie.title}</h4>
+                  <p>Titulo Original: ${movie.original_title}</p>
+                  <p>Lançado: ${formatDate(movie.release_date)}</p>
+                  <p>Popularidade: ${movie.popularity}</p>
+                  <span>Nota: ${movie.vote_average}</span>
+                </div>
+              </div>
+              <div class="sinopse">
+                <h5>Sinopse</h5>
+                <p>${movie.overview}</p>
+              </div>
+          </div>
+        `
+        modal.appendChild(modalCard)
+        document.getElementById('closeBtn').addEventListener('click', () => {
+          modal.classList.add('hide')
+        })
+      })
+      movieResultContainer.appendChild(movieElement)
     });
-    document.getElementById('openModal').addEventListener('click', openModal)
-
-    document.getElementById('closeBtn').addEventListener('click', closeModal)
-    // setTimeout(() => {
-    // }, 1000)
     
-}
-
-export function openModal() {
-    const modal = document.getElementById('modal-card')
-    modal.classList.remove('hide')
-}
-export function closeModal() {
-    const modal = document.getElementById('modal-card')
-    modal.classList.add('hide')
 }
