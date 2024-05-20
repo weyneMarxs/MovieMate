@@ -14,7 +14,7 @@ export function displayMovies(movies) {
           <h4>${movie.title}</h4>
           <p>Titulo Original: ${movie.original_title}</p>
           <p>Lançado: ${formatDate(movie.release_date)}</p>
-          <span>Nota: ${movie.vote_average}</span>
+          <span>Nota: ${movie.vote_average.toFixed(1)}</span>
         </div>
      `
      movieElement.addEventListener('click', () => {
@@ -32,7 +32,7 @@ export function displayMovies(movies) {
                   <p>Titulo Original: ${movie.original_title}</p>
                   <p>Lançado: ${formatDate(movie.release_date)}</p>
                   <p>Popularidade: ${movie.popularity}</p>
-                  <span>Nota: ${movie.vote_average}</span>
+                  <span>Nota: ${movie.vote_average.toFixed(1)}</span>
                 </div>
               </div>
               <div class="sinopse">
