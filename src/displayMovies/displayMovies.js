@@ -2,8 +2,8 @@ import formatDate from "../events/formatDate.js"
 
 export function displayMovies(movies) {
   // const { title, overview, release_date, rating, poster_path} = movies[0]
-  const movieResultContainer = document.getElementById('movieResults')
-  movieResultContainer.innerHTML = ''
+  const contentDiv = document.getElementById('content')
+  contentDiv.innerHTML = ''
   movies.forEach(movie => {
      const movieElement = document.createElement('div')
      movieElement.innerHTML = `
@@ -46,7 +46,7 @@ export function displayMovies(movies) {
           modal.classList.add('hide')
         })
       })
-      movieResultContainer.appendChild(movieElement)
+      contentDiv.appendChild(movieElement)
     });
     
 }
