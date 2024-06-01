@@ -278,7 +278,8 @@ span {
 #error.hide,
 #modal.hide,
 .searchBlock.hide {
-  display: none;
+  /* display: none; */
+  visibility: hidden;
 }
 
 

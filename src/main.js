@@ -3,6 +3,8 @@ const router = new Router()
 
 import toggleInputBackground from "./events/toggleInputBackground.js"
 import searchMovies from "./searchMovies/SearchMovies.js"
+import { showSearchBar, showModal } from "./events/showSearchBar.js"
+
 const inputSearch = document.getElementById('searchInput')
 const btn = document.getElementById('searchBtn')
 
@@ -14,5 +16,7 @@ router.handle()
 window.onpopstate = () => router.handle()
 window.route = () => router.route()
 
+showSearchBar()
+showModal()
 toggleInputBackground(inputSearch)
 btn.addEventListener('click', searchMovies)

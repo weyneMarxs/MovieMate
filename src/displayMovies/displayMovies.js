@@ -1,7 +1,6 @@
 import formatDate from "../events/formatDate.js"
 
 export function displayMovies(movies) {
-  // const { title, overview, release_date, rating, poster_path} = movies[0]
   const contentDiv = document.getElementById('content')
   contentDiv.innerHTML = ''
   movies.forEach(movie => {
@@ -19,6 +18,7 @@ export function displayMovies(movies) {
      `
      movieElement.addEventListener('click', () => {
         const modal = document.getElementById('modal')
+        console.log(modal)
         modal.classList.remove('hide')
         const modalCard = document.getElementById('modal-card')
         modalCard.innerHTML = ''
